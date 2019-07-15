@@ -1,14 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
+import React from 'react';
+import Link from 'next/link';
 
-const links = [
-  { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
-
-const Nav = () => (
+const Nav = (): JSX.Element => (
   <nav>
     <ul>
       <li>
@@ -17,13 +10,11 @@ const Nav = () => (
         </Link>
       </li>
       <ul>
-        {links.map(({ key, href, label }) => (
-          <li key={key}>
-            <Link href={href}>
-              <a>{label}</a>
-            </Link>
-          </li>
-        ))}
+        <li>
+          <Link href="/">
+            <a>Link</a>
+          </Link>
+        </li>
       </ul>
     </ul>
 
@@ -52,8 +43,9 @@ const Nav = () => (
         text-decoration: none;
         font-size: 13px;
       }
-    `}</style>
+    `}
+    </style>
   </nav>
-)
+);
 
-export default Nav
+export default Nav;
