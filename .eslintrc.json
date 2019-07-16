@@ -26,6 +26,7 @@
     ],
     "rules": {
         "@typescript-eslint/indent": ["error", 2],
+        "@typescript-eslint/explicit-member-accessibility": "off",
         "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
         "react/jsx-one-expression-per-line": "off",
         "jsx-a11y/anchor-is-valid": "off"

@@ -1,4 +1,7 @@
-module.exports = {
+/* eslint-disable-next-line @typescript-eslint/no-var-requires */
+const withSass = require('@zeit/next-sass');
+
+module.exports = withSass({
   webpack: (config, { dev }) => {
     // Fixes npm packages that depend on `fs` module
     /* eslint-disable-next-line no-param-reassign */
@@ -17,4 +20,4 @@ module.exports = {
 
     return config;
   },
-};
+});
